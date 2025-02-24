@@ -1,0 +1,69 @@
+/*              PC        */
+
+/* áp dụng cho màn hình có chiều rộng 992px trở lên */
+@media (min-width: 992px) {
+}
+
+/* máy tính bang và điện thoại di động */
+@media (max-width: 991.98px) {
+  /* 1.navbar  */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /*3. căn lại vị trí cho menu icon */
+  /* menu mobile */
+
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    width: 24px;
+    color: #fff;
+  }
+
+  /* 4. overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* cách 0 ở 4 hướng  viet tắt*/
+    inset: 0;
+    z-index: 1;
+    /* trong suất hoàn toàn */
+    opacity: 0;
+    /* ẩn khoải giao diện   */
+    visibility: hidden;
+    transition-duration: 0.5s;
+  }
+
+  /* 5. kiểm tra xem menu có dc check hay không */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    /* để nhìn thấy overlay */
+    visibility: visible;
+  }
+}
+
+/* máy tính bảng */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+}
+
+/* tạm ẩn phần không liên quan*/
+.hero,
+.footer,
+main {
+  display: none;
+}

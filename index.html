@@ -91,6 +91,12 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- style -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
   </head>
   <body>
@@ -100,7 +106,10 @@
         <div class="header-top">
           <!-- logo -->
           <a href="#!"
-            ><img src="./assets/img/logo.svg" alt="Shine smile" class="logo"
+            ><img
+              src="./assets/img/logo.svg"
+              alt="Shine smile"
+              class="header__logo"
           /></a>
 
           <!-- nav -->
@@ -159,6 +168,32 @@
       </div>
     </header>
 
+    <!-- menu dùng máy tính bảng/ điện thoại header -->
+    <div class="mobile-header">
+      <input
+        hidden
+        type="checkbox"
+        name="menu-checkbox"
+        id="menu-checkbox"
+        class="menu-checkbox"
+      />
+      <label for="menu-checkbox">
+        <svg
+          class="menu-header__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+
+      <!--  overlay  -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+    </div>
+
     <!-- Main -->
     <main>
       <!-- Our service -->
@@ -172,7 +207,13 @@
           <div class="service__row">
             <!-- trái  -->
             <figure>
-              <img src="./assets/img/hero-2.jpg" alt="" class="service__img" />
+              <img
+                src="./assets/img/hero-2.jpg"
+                alt=""
+                class="service__img"
+                data-aos="fade-up-right"
+                data-aos-offset="400"
+              />
             </figure>
 
             <!-- phải -->
@@ -751,5 +792,11 @@
         </div>
       </div>
     </section>
+
+    <!-- js animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
