@@ -2,6 +2,9 @@
 
 /* áp dụng cho màn hình có chiều rộng 992px trở lên */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* máy tính bang và điện thoại di động */
@@ -50,6 +53,44 @@
     opacity: 1;
     /* để nhìn thấy overlay */
     visibility: visible;
+  }
+
+  /*code cho menu - drawer */
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40px 0 0;
+    width: 60%;
+    background-color: #2e1919;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition-duration: 0.65s;
+    padding: 60px;
+  }
+  /* khi đã check vào hiện lại menu*/
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /* 8. menu top*/
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+    border-radius: 10px;
   }
 }
 
