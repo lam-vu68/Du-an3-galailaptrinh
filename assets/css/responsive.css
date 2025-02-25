@@ -130,6 +130,36 @@
     width: 90%;
     text-align: start;
   }
+
+  /* word list */
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  /* about */
+  .about__row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .about__media {
+    width: 100%;
+  }
+  /* ẩn ảnh nhỏ  */
+  .about__img--small {
+    display: none;
+  }
+
+  /* phóng to ảnh lớn */
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 /* máy tính bảng */
